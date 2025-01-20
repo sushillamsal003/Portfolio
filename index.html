@@ -1,14 +1,113 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
-  <title>Sushil Lamsal</title>
-  <meta name="google-adsense-account" content="ca-pub-6199739990749460">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushil Lamsal - Web Developer</title>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="google-adsense-account" content="ca-pub-6199739990749460">
 </head>
 <body>
-  <h1>
-    Hello, World!
-  </h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm Sushil Lamsal, a passionate Web Developer.</p>
+        <a href="#projects" class="btn">See My Work</a>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Sushil Lamsal, a web developer specializing in front-end and back-end development. I have a passion for creating seamless and interactive user experiences using HTML, CSS, JavaScript, and Python.</p>
+        <p>When I'm not coding, I enjoy learning about new technologies and improving my skills.</p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>Project 1: Web App</h3>
+            <p>A full-stack web application built with HTML, CSS, JavaScript, and Node.js.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2: Chat Application</h3>
+            <p>A real-time chat application with user authentication using MySQL and JavaScript.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form action="#" method="POST">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section id="resume" class="resume">
+        <h2>My Resume</h2>
+
+        <h3>Summary</h3>
+        <p>I am a web developer with strong knowledge of front-end and back-end technologies. Passionate about creating responsive, user-friendly websites and applications.</p>
+
+        <h3>Skills</h3>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Python, Node.js</li>
+            <li>MySQL, MongoDB</li>
+            <li>Git, Version Control</li>
+            <li>UI/UX Design</li>
+        </ul>
+
+        <h3>Experience</h3>
+        <h4>Web Developer - XYZ Company (2023 - Present)</h4>
+        <p>Developed and maintained web applications, improved user interfaces, and optimized front-end performance using modern JavaScript frameworks.</p>
+
+        <h4>Junior Web Developer - ABC Corp (2021 - 2023)</h4>
+        <p>Assisted in designing and developing websites, creating user-friendly interfaces, and ensuring cross-browser compatibility.</p>
+
+        <h3>Education</h3>
+        <h4>Bachelor of Computer Science - University of Nepal (2017 - 2021)</h4>
+
+        <h3>Certifications</h3>
+        <ul>
+            <li>Certified Web Developer - XYZ Institute</li>
+            <li>Python for Data Science - ABC Academy</li>
+        </ul>
+
+        <h3>Download Resume</h3>
+        <a href="assets/resume.pdf" class="btn" download>Download Resume (PDF)</a>
+    </section>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/yourprofile" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com/yourusername" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+        </div>
+        <p>&copy; 2025 Sushil Lamsal. All rights reserved.</p>
+        <!-- Social media links in footer -->
+        
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
