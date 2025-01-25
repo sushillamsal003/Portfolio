@@ -3,111 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sushil Lamsal - Web Developer</title>
-    <!-- Include Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>All Social Media Links</title>
+    
+    <!-- Font Awesome Icons (Latest Version) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta name="google-adsense-account" content="ca-pub-6199739990749460">
+
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #000;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background-color: #181818;
+            color: #fff;
+        }
+        h1 {
+            margin-top: 20px;
+        }
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px;
+        }
+        .search-box {
+            padding: 10px;
+            width: 250px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .toggle-btn {
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            background: #333;
+            color: #fff;
+        }
+        body.dark-mode .toggle-btn {
+            background: #fff;
+            color: #000;
+            
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            background-color: #f0f8ff;
+            transform: scale(1.05);
+        }
+        body.dark-mode .card {
+            background-color: #333;
+            border-color: #555;
+            
+        }
+        .card a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 18px;
+        }
+        body.dark-mode .card a {
+            color: #fff;
+        }
+        .icon {
+            font-size: 24px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#resume">Resume</a></li>
-            </ul>
-            
-        </nav>
-    </header>
-    
-    <section id="home" class="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>I'm Sushil Lamsal, a passionate Web Developer.</p>
-        <a href="#projects" class="btn">See My Work</a>
-    </section>
 
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Sushil Lamsal, a web developer specializing in front-end and back-end development. I have a passion for creating seamless and interactive user experiences using HTML, CSS, JavaScript, and Python.</p>
-        <p>When I'm not coding, I enjoy learning about new technologies and improving my skills.</p>
-    </section>
+    <h1>All Social Media Links</h1>
 
-    <section id="projects" class="projects">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Project 1: Web App</h3>
-            <p>A full-stack web application built with HTML, CSS, JavaScript, and Node.js.</p>
-        </div>
-        <div class="project">
-            <h3>Project 2: Chat Application</h3>
-            <p>A real-time chat application with user authentication using MySQL and JavaScript.</p>
-        </div>
-    </section>
+    <div class="controls">
+        <input type="text" id="search" class="search-box" placeholder="Search social media..." onkeyup="filterCards()">
+        <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
 
-    <section id="contact" class="contact">
-        <h2>Contact Me</h2>
-        <form action="#" method="POST">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
+    <div class="container" id="socialMediaList">
+        <div class="card"><a href="https://www.facebook.com"><i class="fa-brands fa-facebook icon" style="color: #1877F2;"></i> Facebook</a></div>
+        <div class="card"><a href="https://www.twitter.com"><i class="fa-brands fa-x-twitter icon" style="color: #000;"></i> Twitter (X)</a></div>
+        <div class="card"><a href="https://www.instagram.com"><i class="fa-brands fa-instagram icon" style="color: #E4405F;"></i> Instagram</a></div>
+        <div class="card"><a href="https://www.linkedin.com"><i class="fa-brands fa-linkedin icon" style="color: #0077B5;"></i> LinkedIn</a></div>
+        <div class="card"><a href="https://www.snapchat.com"><i class="fa-brands fa-snapchat icon" style="color: #FFFC00;"></i> Snapchat</a></div>
+        <div class="card"><a href="https://www.tiktok.com"><i class="fa-brands fa-tiktok icon" style="color: #000;"></i> TikTok</a></div>
+        <div class="card"><a href="https://www.reddit.com"><i class="fa-brands fa-reddit icon" style="color: #FF4500;"></i> Reddit</a></div>
+        <div class="card"><a href="https://www.pinterest.com"><i class="fa-brands fa-pinterest icon" style="color: #E60023;"></i> Pinterest</a></div>
+        <div class="card"><a href="https://www.youtube.com"><i class="fa-brands fa-youtube icon" style="color: #FF0000;"></i> YouTube</a></div>
+        <div class="card"><a href="https://www.discord.com"><i class="fa-brands fa-discord icon" style="color: #5865F2;"></i> Discord</a></div>
+        <div class="card"><a href="https://www.telegram.org"><i class="fa-brands fa-telegram icon" style="color: #0088cc;"></i> Telegram</a></div>
+        <div class="card"><a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp icon" style="color: #25D366;"></i> WhatsApp</a></div>
+        <div class="card"><a href="https://www.tumblr.com"><i class="fa-brands fa-tumblr icon" style="color: #34526F;"></i> Tumblr</a></div>
+        <div class="card"><a href="https://www.twitch.tv"><i class="fa-brands fa-twitch icon" style="color: #6441A5;"></i> Twitch</a></div>
+        <div class="card"><a href="https://www.mastodon.social"><i class="fa-brands fa-mastodon icon" style="color: #6364FF;"></i> Mastodon</a></div>
+        <div class="card"><a href="https://www.behance.net"><i class="fa-brands fa-behance icon" style="color: #1769FF;"></i> Behance</a></div>
+        <div class="card"><a href="https://www.dribbble.com"><i class="fa-brands fa-dribbble icon" style="color: #EA4C89;"></i> Dribbble</a></div>
+    </div>
 
-    <section id="resume" class="resume">
-        <h2>My Resume</h2>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+            localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+        }
 
-        <h3>Summary</h3>
-        <p>I am a web developer with strong knowledge of front-end and back-end technologies. Passionate about creating responsive, user-friendly websites and applications.</p>
+        function filterCards() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let cards = document.querySelectorAll(".card");
 
-        <h3>Skills</h3>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>Python, Node.js</li>
-            <li>MySQL, MongoDB</li>
-            <li>Git, Version Control</li>
-            <li>UI/UX Design</li>
-        </ul>
+            cards.forEach(card => {
+                let text = card.innerText.toLowerCase();
+                if (text.includes(input)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
 
-        <h3>Experience</h3>
-        <h4>Web Developer - XYZ Company (2023 - Present)</h4>
-        <p>Developed and maintained web applications, improved user interfaces, and optimized front-end performance using modern JavaScript frameworks.</p>
+        // Keep Dark Mode on Reload
+        if (localStorage.getItem("darkMode") === "true") {
+            document.body.classList.add("dark-mode");
+        }
+    </script>
 
-        <h4>Junior Web Developer - ABC Corp (2021 - 2023)</h4>
-        <p>Assisted in designing and developing websites, creating user-friendly interfaces, and ensuring cross-browser compatibility.</p>
-
-        <h3>Education</h3>
-        <h4>Bachelor of Computer Science - University of Nepal (2017 - 2021)</h4>
-
-        <h3>Certifications</h3>
-        <ul>
-            <li>Certified Web Developer - XYZ Institute</li>
-            <li>Python for Data Science - ABC Academy</li>
-        </ul>
-
-        <h3>Download Resume</h3>
-        <a href="assets/resume.pdf" class="btn" download>Download Resume (PDF)</a>
-    </section>
-
-    <footer>
-        <div class="social-media">
-            <a href="https://www.facebook.com/yourprofile" target="_blank" class="social-icon"><i class="fab fa-facebook"></i></a>
-            <a href="https://github.com/yourusername" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
-        </div>
-        <p>&copy; 2025 Sushil Lamsal. All rights reserved.</p>
-        <!-- Social media links in footer -->
-        
-    </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
